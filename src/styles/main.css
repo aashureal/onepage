@@ -103,4 +103,31 @@ body {
   .Granger.page .Hero .header .top.part .menu__btn {
     display: none;
   }
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("./fonts/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Juana";
+  src: url("./fonts/juana.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.Koel.page section.Hero .header {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
