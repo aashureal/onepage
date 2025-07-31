@@ -1,15 +1,9 @@
-import { Helmet } from "react-helmet";
-import { AppRoutes } from "../routes/AppRoutes";
-import { Link } from "react-router-dom";
+import React from 'react'
 
 const Home = () => {
   return (
-    <>
-      <Helmet>
-        <title>Home / Onepage</title>
-      </Helmet>
+    <div>Home</div>
+  )
+}
 
-    </>
-  );
-};
-export default Home;
+export default Home

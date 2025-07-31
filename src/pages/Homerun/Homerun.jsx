@@ -1,9 +1,11 @@
-import React from 'react'
+import Hero_Homerun from "./sections/Hero_Homerun";
 
 const Homerun = () => {
   return (
-    <div>Homerun</div>
-  )
-}
+    <>
+      <Hero_Homerun />;
+    </>
+  );
+};
 
-export default Homerun
+export default Homerun;
