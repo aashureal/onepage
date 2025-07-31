@@ -1,21 +1,15 @@
-import Granger from "../pages/Granger/Granger";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
-import Koel from "../pages/Koels/Koel";
+import Homerun from "../pages/Homerun/Homerun";
 
-export const AppRoutes = [
-  {
-    path: "/",
-    element: <Home />,
-    text: "Home",
-  },
-  {
-    path: "/granger",
-    element: <Granger />,
-    text: "Granger",
-  },
-  {
-    path: "/koel",
-    element: <Koel />,
-    text: "Koel",
-  },
-];
+const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/homerun" element={<Homerun />} />
+    </Routes>
+  );
+};
+
+export default AppRoutes;
