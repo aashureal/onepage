@@ -10,6 +10,16 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "HelveticaNeueRoman";
+  src: url("/fonts/HelveticaNeueRoman.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/fonts/HelveticaNeueMedium.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -42,18 +52,21 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
 }
+.Homerun.page section.hero .textbox {
+  position: relative;
+  padding: 0 3rem;
+}
 .Homerun.page section.hero .textbox .text {
   display: flex;
   color: #edd4f8;
   text-transform: uppercase;
-  font-size: 20vw;
-  font-weight: bold;
-  line-height: 20vw;
+  font-size: 19vw;
   gap: 2px;
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  font-family: "Space";
+  font-family: "HelveticaNeueMedium";
+  font-weight: 500;
 }
 .Homerun.page section.hero .textbox .text span {
   font-size: inherit;
@@ -64,4 +77,28 @@ body::-webkit-scrollbar {
   width: -moz-max-content;
   width: max-content;
   overflow: hidden;
+}
+.Homerun.page section.hero .textbox .text span .over-char {
+  position: relative;
+  z-index: 99;
+}
+.Homerun.page section.hero .textbox .video__container {
+  width: 25vw;
+  aspect-ratio: 16/10;
+  position: absolute;
+  top: -28%;
+  right: 32%;
+  transform: rotate(-10deg);
+}
+.Homerun.page section.hero .textbox .video__container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.Homerun.page section.videosection {
+  height: 100vh;
+  width: 100%;
+  background-color: #181817;
 }/*# sourceMappingURL=main.css.map */

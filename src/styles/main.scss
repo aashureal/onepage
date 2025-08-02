@@ -11,6 +11,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "HelveticaNeueRoman";
+  src: url("/fonts/HelveticaNeueRoman.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/fonts/HelveticaNeueMedium.otf");
+
+}
 
 * {
   margin: 0;
@@ -23,7 +34,6 @@ body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  
 }
 body {
   overflow: auto;

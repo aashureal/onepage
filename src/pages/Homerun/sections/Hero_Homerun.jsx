@@ -1,8 +1,12 @@
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero_Homerun = () => {
   // Refs for each animated character
+
   const hRef = useRef(null);
   const oRef = useRef(null);
   const mRef = useRef(null);
@@ -13,7 +17,7 @@ const Hero_Homerun = () => {
 
   // Individual animation functions:
   const animateH = () => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({});
     tl.to(hRef.current, { x: -200, opacity: 0, duration: 0.2 });
     tl.set(hRef.current, { x: 100, opacity: 0 });
     tl.to(hRef.current, { x: 0, opacity: 1, duration: 0.2 });
@@ -55,6 +59,21 @@ const Hero_Homerun = () => {
     tl.to(nRef.current, { x: 0, opacity: 1, duration: 0.2 });
   };
 
+  useGSAP(() => {
+    gsap.to(".video__container", {
+      rotate: 0,
+      y: "85vh",
+      x: "34vw",
+      width: "100%",
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+    });
+  }, []);
+
   return (
     <div className="Homerun page">
       <section className="hero">
@@ -76,12 +95,12 @@ const Hero_Homerun = () => {
               </div>
             </span>
             <span className="up" onMouseEnter={animateE}>
-              <div className="char" ref={eRef}>
+              <div className="char over-char" ref={eRef}>
                 e
               </div>
             </span>
             <span className="left" onMouseEnter={animateR}>
-              <div className="char" ref={rRef}>
+              <div className="char over-char" ref={rRef}>
                 r
               </div>
             </span>
@@ -96,8 +115,20 @@ const Hero_Homerun = () => {
               </div>
             </span>
           </h2>
+
+          <div className="video__container">
+            <video
+              src="https://a.storyblok.com/f/325490/x/6ccfd466b9/2025_02_homerun_showreel_sanstexte.mp4"
+              autoPlay
+              playsInline
+              loop
+              muted
+            ></video>
+          </div>
         </div>
       </section>
+
+      <section className="videosection"></section>
     </div>
   );
 };
